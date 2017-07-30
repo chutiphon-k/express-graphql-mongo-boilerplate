@@ -11,6 +11,7 @@
     "test": "eslint"
   },
   "dependencies": {
+    "apollo-errors": "^1.4.0",
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
     "cors": "^2.8.4",
