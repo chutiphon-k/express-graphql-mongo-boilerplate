@@ -1,5 +1,5 @@
 {
-	"presets": ["es2015", "stage-0", "es2017"],
+	"presets": ["stage-0", "es2017"],
 	"plugins": [
 		[
 			"module-resolver", {
@@ -8,6 +8,7 @@
 					"root": "./"
 				}
 			}
-		]
+		],
+		"babel-plugin-transform-es2015-modules-commonjs"
 	]
 }
