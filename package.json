@@ -15,7 +15,6 @@
     "compression": "^1.7.0",
     "cors": "^2.8.4",
     "cross-env": "^5.0.1",
-    "eslint-config-chutiphonk": "https://github.com/chutiphon-k/eslint-config-chutiphonk.git",
     "express": "^4.15.3",
     "express-graphql": "^0.6.7",
     "graphql": "^0.10.5",
@@ -33,6 +32,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.3.0",
+    "eslint-config-chutiphonk": "https://github.com/chutiphon-k/eslint-config-chutiphonk.git",
     "nodemon": "^1.11.0"
   }
 }
