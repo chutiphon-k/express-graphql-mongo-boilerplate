@@ -1,3 +1,6 @@
 {
-	"extends": ["chutiphonk"]
+	"extends": ["chutiphonk"],
+	"plugins": [
+		"graphql"
+	]
 }

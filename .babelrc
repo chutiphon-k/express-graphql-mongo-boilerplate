@@ -1,0 +1,16 @@
+{
+	"presets": [
+		"backpack-core/babel",
+		"stage-0"
+	],
+	"plugins": [
+		[
+			"module-resolver", {
+				"root": ["./src"],
+				"alias": {
+					"root": "./"
+				}
+			}
+		]
+	]
+}
