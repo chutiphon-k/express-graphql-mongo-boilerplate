@@ -6,7 +6,7 @@ const AttemptConnectDB = 5
 
 const init = async (app) => {
 	try {
-		await mongoose.createConnection(MONGO_URL, { useMongoClient: true })
+		await mongoose.connect(MONGO_URL)
 		app.listen(PORT, () => {
 			console.log(`[INFO] Listening on *: ${PORT}`.info)
 		})
@@ -14,12 +14,12 @@ const init = async (app) => {
 		console.log(`[Error] Cannot connect MongoDB`.error)
 		let couter = 0
 		let interval = setInterval(() => {
-			++couter
-			console.log(`MongoDB not ready, retry in ${couter} seconds...`.data)
+			console.log(`MongoDB not ready, retry in ${AttemptConnectDB-couter} seconds...`.data)
 			if (couter === AttemptConnectDB) {
 				clearInterval(interval)
 				init(app)
 			}
+			++couter
 		}, 1000)
 	}
 }

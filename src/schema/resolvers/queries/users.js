@@ -1,11 +1,6 @@
+import { User } from 'models'
+
 export default async () => {
-	return [
-		{
-			id: 1,
-			username: 'eieiza'
-		}, {
-			id: 2,
-			username: 'eieiza'
-		}
-	]
+	const users = await User.find({}).lean()
+	return users
 }

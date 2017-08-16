@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express'
+import { formatError } from 'apollo-errors'
 
 import schema from 'schema'
 
@@ -14,11 +15,12 @@ if (isDev) {
 }
 
 router.get('/', (req, res) => {
-	res.send('123')
+	res.send('Express Graphql Mongo Boilerplate')
 })
 
 router.post('/graphql', graphqlExpress(({ user }) => ({
 	schema,
+	formatError,
 	context: { user }
 })))
 
